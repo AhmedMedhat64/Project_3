@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent_M {
+    background-color: #c03f3f;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Btn {
+    position: absolute;
+    width: 25%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Btn  button {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(0, 102, 255);
+    color: #fff;
+    font-size: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+}
+
+.Btn  button:hover {
+    border: 5px solid #c03f3f;
+}
+
+
+
+.trips-parent:hover .trips {
+    font-weight: 600;
+    font-size: 22px;
+    color: red;
+    text-shadow: 0px 0px 30px red;
+}
+
+.line {
+    border-right: 2px solid lightskyblue;
+} 
+
+.parent-icons
+{
+    flex-direction: column; z-index: 5; left: 90%; top: 28%;
+}
+
+.carousel-img {
+    height: 75vh;
+}
+
+.graphic {
+    width: 26rem;
+    perspective: 500px;
+}
+
+@media (max-width: 991px) {
+    .graphic {
+        width: 20rem;
+        margin: auto;   
+    }   
+    .search {
+        margin-bottom: 20px;
+    }
+    .carousel-img {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .parent-icons {
+        left: 75%;
+        top: 45%;
+    }    
+
+    .images-icons {
+        width: 75%; 
+        margin: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-img {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    border-radius: 0px;
+    }
+
+    .card-img2{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+        border-radius: 0px;
+    }
+}
+
+.After-Before::after {
+    background-color: rgba(135, 206, 250, 0.3);
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.After-Before:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.After-Before::before {
+    background-color: rgba(24, 211, 202, 0.3);
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    transition: 0.5s;
+}
+
+.After-Before:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.area::placeholder {
+    color: black;
+    font-size: 20px;
+}
+
+.overlay {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.info_2 img {
+    width: 75px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.Sm-parent {
+    transition: 500ms;
+}
+
+.Sm-parent:hover {
+    transform: translateZ(-50px);
+    
+}
+
+.copy-right2 p:hover {
+    color: rgba(153, 152, 152, 0.5);
+}
+
+.card-2 {
+    width: 75px;
+    height: 5px;
+    transition: 0.3s;
+}
+
+.line2:hover .card-2 {
+    width: 150px;
+}
+
+.last-btn {
+    color: lightseagreen;
+}
+
+.last-btn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #e9e6e6;
+}

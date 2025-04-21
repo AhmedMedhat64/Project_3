@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Program_3</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-light" style="z-index: 10;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img width="80" height="80" class="rounded-circle ms-5 shadow-lg" src="images/linkedin.png">
+      </a>
+      <a class="navbar-brand line pe-2" href="#">Egypt</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-info active home" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="trips-parent nav-link text-info shadow-lg border border-2 border-info rounded-3 dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="trips">T</span>rips
+            </a>
+            <ul class="dropdown-menu text-uppercase">
+              <li><a class="dropdown-item text-info" href="#">Action</a></li>
+              <li><a class="dropdown-item text-info" href="#">Another action</a></li>
+              <li ><hr class="dropdown-divider bg-info"></li>
+              <li><a class="dropdown-item text-info" href="#">Something</a></li>
+              <li><a class="dropdown-item text-info" href="#">Something</a></li>
+              <li><a class="dropdown-item text-info" href="#">Something</a></li>
+              <li><a class="dropdown-item text-info" href="#">Something</a></li>
+              <li><a class="dropdown-item text-info" href="#">Something</a></li>
+              <li><a class="dropdown-item text-info" href="#">Something</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-info" href="#">About</a>
+          </li>
+        </ul>
+        <form class="d-flex search" role="search">
+          <input class="form-control mx-3 border border-info border-1" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <button class="btn btn-outline me-3 btn-info text-light" type="submit">Search</button>
+        <button type="button" class="btn btn-outline btn-info text-light px-3" data-bs-toggle="modal" data-bs-target="#myModal">
+          login
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- start modal --> 
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border border-info">
+        <!-- modal-header -->
+       <div class="modal-header bg-info text-light">
+         <h4 class="modal-title">login</h4>
+         <button type="button" class="btn-close bg-light border border-1 rounded-3 border-secondary" data-bs-dismiss="modal"></button>
+       </div>
+        <!-- Modal body -->
+        <div class="modal-body text-info px-4">
+          <form action="/action_page.php">
+    <div class="my-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" class="form-control" id="email" name="email">
+      <label class="ms-2 text-secondary">we will never share your email with any one else</label>
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password:</label>
+      <input type="password" class="form-control" id="pwd" name="pswd">
+    </div>
+    <div class="form-check form-switch ms-3">
+      <input class="form-check-input bg-info" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+      <label class="form-check-label text-capitalize" for="flexSwitchCheckDefault">remmember me</label>
+    </div>
+  </form>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer text-light">
+          <button type="submit" class="me-auto text-light btn btn-info">Submit</button>
+          <button type="button" class="btn btn-info text-light" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- End modal -->
+
+  <div id="carouselExampleCaptions" class="carousel slide" >
+    <div class="modal-dialog modal-dialog-centered">
+      
+    </div>
+    <div class="carousel-indicators pb-5 mb-5">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner position-relative">
+        <div class="parent-icons d-flex position-fixed">
+          <i class="fa-brands fa-facebook-f py-3 ps-4 mb-3 fs-1 text-info bg-secondary rounded-2"></i>
+          <i class="fa-brands fa-facebook-f py-3 px-4 mb-3 fs-1 text-info bg-secondary rounded-2"></i>
+          <i class="fa-brands fa-facebook-f py-3 px-4 mb-3 fs-1 text-info bg-secondary rounded-2"></i>
+          <i class="fa-brands fa-facebook-f py-3 px-4 mb-3 fs-1 text-info bg-secondary rounded-2"></i>
+          <i class="fa-brands fa-facebook-f py-3 px-4 mb-3 fs-1 text-info bg-secondary rounded-2"></i>
+        </div>
+      <div class="carousel-item active">
+        <img src="Images/Img-1.jpg" class="carousel-img d-block w-100">
+        <div class="carousel-caption d-none d-md-block py-5 mb-5">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Images/Img-3.jpg" class="carousel-img d-block w-100">
+        <div class="carousel-caption d-none d-md-block py-5 mb-5">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Images/Img-8.jpg" class="carousel-img d-block w-100">
+        <div class="carousel-caption d-none d-md-block py-5 mb-5">
+          <h5>third slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Images/Img-9.jpg" class="carousel-img d-block w-100">
+        <div class="carousel-caption d-none d-md-block py-5 mb-5">
+          <h5>fourth slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  
+  <div class="container-fluid mb-2 px-5 py-3 bg-secondary rounded-3">
+    <h2 class="mb-2 text-info display-4">Welcome</h2>
+    <p class="my-3 text-white-50 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas laboriosam vero eveniet placeat molestias dignissimos temporibus. Ducimus suscipit earum architecto. Unde iure possimus temporibus dolorem alias doloribus mollitia at soluta.</p>
+    <button class="btn btn-info py-2 px-3 mb-2 text-uppercase">learn more</button>
+  </div>
+
+  <hr>
+
+  <div class="container-fluid m-2 px-5 py-3 bg-secondary rounded-3">
+    <h2 class="my-5 text-light display-4 text-center text-capitalize ">A wonderful sightseeing</h2>
+  </div>
+
+  <!-- Accorodion -->
+
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Accoradion -->
+
+
+  <!-- start-teax-area -->
+  <div class="container-fluid m-2 px-5 py-2 bg-secondary rounded-3">
+    <h2 class="my-1 text-light display-4 text-center text-capitalize">translate arabic to english</h2>
+  </div>
+
+  <div class="container-fluid m-2 px-5 py-3 bg-secondary rounded-3">
+    <p class="text-light text-capitalize fs-3">write and translate <b class="text-dark fs-3 fw-6">press here</b></p>
+
+    <button class="btn btn-info text-uppercase px-4 rounded-pill">copy</button>
+
+    <textarea placeholder="Translate:" class="form-control mt-3 bg-light text-dark area" rows="5" id="comment" name="text"></textarea>
+  </div>
+
+  <hr>
+
+  <div class="container-fluid m-2 px-5 py-2 bg-secondary rounded-3">
+    <h2 class="my-1 text-light display-4 text-center text-capitalize">translate arabic to french</h2>
+  </div>
+
+  <div class="container-fluid m-2 px-5 py-3 bg-secondary rounded-3">
+    <p class="text-light text-capitalize fs-3">write and translate <b class="text-dark fs-3 fw-6">press here</b></p>
+
+    <button class="btn btn-info text-uppercase px-4 rounded-pill">copy</button>
+
+    <textarea placeholder="Translate:" class="form-control mt-3 bg-light text-dark area" rows="5" id="comment" name="text"></textarea>
+  </div>
+
+  <hr>
+
+  <div class="container-fluid m-2 px-5 py-2 bg-secondary rounded-3">
+    <h2 class="my-1 text-light display-4 text-center text-capitalize">translate arabic to german</h2>
+  </div>
+
+  <div class="container-fluid m-2 px-5 py-3 bg-secondary rounded-3">
+    <p class="text-light text-capitalize fs-3">write and translate <b class="text-dark fs-3 fw-6">press here</b></p>
+
+    <button class="btn btn-info text-uppercase px-4 rounded-pill">copy</button>
+
+    <textarea placeholder="Translate:" class="form-control mt-3 bg-light text-dark area" rows="5" id="comment" name="text"></textarea>
+  </div>
+
+
+
+  <!-- end-teax-area -->
+
+  <div class="container-fluid" style="height: 300px; background-image: url(./Images/Img-3.jpg); background-size: cover;">
+  </div>
+
+  <div class="container-fluid m-2 px-5 py-2 bg-secondary rounded-3">
+    <p class="my-1 display-4 text-info  text-center text-uppercase fw-bold fs-1">popular destination in egypt </p>
+  </div>
+  
+  <div class="container-fluid mt-4">
+    <div class="row justify-content-around">
+      <div class="col-md-6 col-lg-4 mb-5 mt-3">
+          <div class="card After-Before w-75 mx-auto shadow-lg px-3">
+            <img class="card-img-top shadow-lg" src="images/lake-192980_640.jpg" style="height: 55vh;">
+            <div class="card-body pb-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title text-uppercase text-info">cairo</h4>
+                <a href="#" class="btn btn-info text-light text-capitalize fs-5 rounded-3">Know more</a> 
+              </div>
+              <p class="card-text text-capitalize text-info fs-4">capital of eygpt</p>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-6 col-lg-4 mb-5 mt-3">
+          <div class="card After-Before w-75 mx-auto shadow-lg px-3">
+            <img class="card-img-top shadow-lg" src="images/lake-192980_640.jpg" style="height: 55vh;">
+            <div class="card-body pb-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title text-uppercase text-info">cairo</h4>
+                <a href="#" class="btn btn-info text-light text-capitalize fs-5 rounded-3">Know more</a> 
+              </div>
+              <p class="card-text text-capitalize text-info fs-4">capital of eygpt</p>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-6 col-lg-4 mb-5 mt-3">
+          <div class="card After-Before w-75 mx-auto shadow-lg px-3">
+            <img class="card-img-top shadow-lg" src="images/lake-192980_640.jpg" style="height: 55vh;">
+            <div class="card-body pb-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title text-uppercase text-info">cairo</h4>
+                <a href="#" class="btn btn-info text-light text-capitalize fs-5 rounded-3">Know more</a> 
+              </div>
+              <p class="card-text text-capitalize text-info fs-4">capital of eygpt</p>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-6 col-lg-4 mb-5 mt-3">
+          <div class="card After-Before w-75 mx-auto shadow-lg px-3">
+            <img class="card-img-top shadow-lg" src="images/lake-192980_640.jpg" style="height: 55vh;">
+            <div class="card-body pb-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title text-uppercase text-info">cairo</h4>
+                <a href="#" class="btn btn-info text-light text-capitalize fs-5 rounded-3">Know more</a> 
+              </div>
+              <p class="card-text text-capitalize text-info fs-4">capital of eygpt</p>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-6 col-lg-4 mb-5 mt-3">
+          <div class="card After-Before w-75 mx-auto shadow-lg px-3">
+            <img class="card-img-top shadow-lg" src="images/lake-192980_640.jpg" style="height: 55vh;">
+            <div class="card-body pb-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title text-uppercase text-info">cairo</h4>
+                <a href="#" class="btn btn-info text-light text-capitalize fs-5 rounded-3">Know more</a> 
+              </div>
+              <p class="card-text text-capitalize text-info fs-4">capital of eygpt</p>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-6 col-lg-4 mb-5 mt-3">
+          <div class="card After-Before w-75 mx-auto shadow-lg px-3">
+            <img class="card-img-top shadow-lg" src="images/lake-192980_640.jpg" style="height: 55vh;">
+            <div class="card-body pb-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title text-uppercase text-info">cairo</h4>
+                <a href="#" class="btn btn-info text-light text-capitalize fs-5 rounded-3">Know more</a> 
+              </div>
+              <p class="card-text text-capitalize text-info fs-4">capital of eygpt</p>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-6 col-lg-4 mb-5 mt-3">
+          <div class="card After-Before w-75 mx-auto shadow-lg px-3">
+            <img class="card-img-top shadow-lg" src="images/lake-192980_640.jpg" style="height: 55vh;">
+            <div class="card-body pb-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title text-uppercase text-info">cairo</h4>
+                <a href="#" class="btn btn-info text-light text-capitalize fs-5 rounded-3">Know more</a> 
+              </div>
+              <p class="card-text text-capitalize text-info fs-4">capital of eygpt</p>
+            </div>
+          </div>
+        </div>
+      <div class="col-md-6 col-lg-4 mb-5 mt-3">
+          <div class="card After-Before w-75 mx-auto shadow-lg px-3">
+            <img class="card-img-top shadow-lg" src="images/lake-192980_640.jpg" style="height: 55vh;">
+            <div class="card-body pb-4">
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title text-uppercase text-info">cairo</h4>
+                <a href="#" class="btn btn-info text-light text-capitalize fs-5 rounded-3">Know more</a> 
+              </div>
+              <p class="card-text text-capitalize text-info fs-4">capital of eygpt</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+<div class="container-fluid" style="height: 300px; background-image: url(./Images/Img-3.jpg); background-size: cover;">
+</div>
+
+<div class="container-fluid m-2 px-5 py-4 bg-info rounded-3 ">
+  <p class="my-1 display-4 text-black-50 text-center text-uppercase fw-bold fs-1">thanks for</p>
+</div>
+
+<div class="container">
+  <div class="d-flex justify-content-between flex-wrap pt-5">
+    <div class="my-3 graphic">
+      <div class="rounded-5 position-relative Sm-parent" style="height: 55vh;">
+        <img src="images/trainer_1.jpg" class="img-fluid w-100 h-100 rounded-5">
+        <div class="overlay position-absolute rounded-5 w-100 h-100 p-4">
+          <div class="information">
+            <div class="info_1 text-white-50 position-absolute">
+              <h2 class="fs-3">All thanks and apprecition</h2>
+              <p class="fs-6"><i class="fa-regular fa-clock"></i> october 15, 2020</p>
+            </div>
+            <div class="info_2 text-white-50 position-absolute" style="top: 65%;">
+              <img class="border border-3" src="images/trainer_1.jpg">
+              <h2 class="fs-6">Lorem ipsum dolor sit amet</h2>
+              <p class="fs-6">october 15, 2020</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-3 graphic">
+      <div class="rounded-5 position-relative Sm-parent" style="height: 55vh;">
+        <img src="images/trainer_1.jpg" class="img-fluid w-100 h-100 rounded-5">
+        <div class="overlay position-absolute rounded-5 w-100 h-100 p-4">
+          <div class="information">
+            <div class="info_1 text-white-50 position-absolute">
+              <h2 class="fs-3">All thanks and apprecition</h2>
+              <p class="fs-6"><i class="fa-regular fa-clock"></i> october 15, 2020</p>
+            </div>
+            <div class="info_2 text-white-50 position-absolute" style="top: 65%;">
+              <img class="border border-3" src="images/trainer_1.jpg">
+              <h2 class="fs-6">Lorem ipsum dolor sit amet</h2>
+              <p class="fs-6">october 15, 2020</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-3 mb-5 graphic">
+      <div class="rounded-5 position-relative Sm-parent" style="height: 55vh;">
+        <img src="images/trainer_1.jpg" class="img-fluid w-100 h-100 rounded-5">
+        <div class="overlay position-absolute rounded-5 w-100 h-100 p-4">
+          <div class="information">
+            <div class="info_1 text-white-50 position-absolute">
+              <h2 class="fs-3">All thanks and apprecition</h2>
+              <p class="fs-6"><i class="fa-regular fa-clock"></i> october 15, 2020</p>
+            </div>
+            <div class="info_2 text-white-50 position-absolute" style="top: 65%;">
+              <img class="border border-3" src="images/trainer_1.jpg">
+              <h2 class="fs-6">Lorem ipsum dolor sit amet</h2>
+              <p class="fs-6">october 15, 2020</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="card mx-auto">
+    <div class="d-flex podcast flex-wrap">
+      <div class="col-md-4 podcast1">
+        <img src="images/jc-gellidon-EH9f0TI5wco-unsplash.jpg" class="img-fluid card-img h-100">
+      </div>
+      <div class="col-md-8 podcast2">
+        <div class="card-body">
+          <h2 class="card-title fs-1 text-capitalize">podcast title</h2>
+          <p class="card-text text-capitalize fs-6"><i class="fa-solid fa-calendar-days"></i>mon, may 25th 2020</p>
+          <div class="line2 py-1">
+            <p class="card-text mb-1 card-2 bg-info rounded-pill"></p>
+          </div>
+          <p class="card-text mb-5 fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit debitis nostrum accusamus, dicta blanditiis pariatur dolorum molestiae quam tenetur est sequi hic, culpa adipisci. Officiis, ipsa. Hic omnis rerum repudiandae.</p>
+          <button class="btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-tag"></i>podcast</button>
+          <button class="btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-clock"></i>55min.</button>
+          <button class="btn last-btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-play"></i>play episode</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="card mx-auto">
+    <div class="d-flex podcast flex-row-reverse flex-wrap">
+      <div class="col-md-4 podcast1">
+        <img src="images/jc-gellidon-EH9f0TI5wco-unsplash.jpg" class="img-fluid card-img2 h-100">
+      </div>
+      <div class="col-md-8 podcast2">
+        <div class="card-body">
+          <h2 class="card-title fs-1 text-capitalize">podcast title</h2>
+          <p class="card-text text-capitalize fs-6"><i class="fa-solid fa-calendar-days"></i>mon, may 25th 2020</p>
+          <div class="line2 py-1">
+            <p class="card-text mb-1 card-2 bg-info rounded-pill"></p>
+          </div>
+          <p class="card-text mb-5 fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit debitis nostrum accusamus, dicta blanditiis pariatur dolorum molestiae quam tenetur est sequi hic, culpa adipisci. Officiis, ipsa. Hic omnis rerum repudiandae.</p>
+          <button class="btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-tag"></i>podcast</button>
+          <button class="btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-clock"></i>55min.</button>
+          <button class="btn last-btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-play"></i>play episode</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="card mx-auto">
+    <div class="d-flex podcast flex-wrap">
+      <div class="col-md-4 podcast1">
+        <img src="images/jc-gellidon-EH9f0TI5wco-unsplash.jpg" class="img-fluid card-img h-100">
+      </div>
+      <div class="col-md-8 podcast2">
+        <div class="card-body">
+          <h2 class="card-title fs-1 text-capitalize">podcast title</h2>
+          <p class="card-text text-capitalize fs-6"><i class="fa-solid fa-calendar-days"></i>mon, may 25th 2020</p>
+          <div class="line2 py-1">
+            <p class="card-text mb-1 card-2 bg-info rounded-pill"></p>
+          </div>
+          <p class="card-text mb-5 fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit debitis nostrum accusamus, dicta blanditiis pariatur dolorum molestiae quam tenetur est sequi hic, culpa adipisci. Officiis, ipsa. Hic omnis rerum repudiandae.</p>
+          <button class="btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-tag"></i>podcast</button>
+          <button class="btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-clock"></i>55min.</button>
+          <button class="btn last-btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-play"></i>play episode</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="card mx-auto">
+    <div class="d-flex podcast flex-row-reverse flex-wrap">
+      <div class="col-md-4 podcast1">
+        <img src="images/jc-gellidon-EH9f0TI5wco-unsplash.jpg" class="img-fluid card-img2 h-100">
+      </div>
+      <div class="col-md-8 podcast2">
+        <div class="card-body">
+          <h2 class="card-title fs-1 text-capitalize">podcast title</h2>
+          <p class="card-text text-capitalize fs-6"><i class="fa-solid fa-calendar-days"></i>mon, may 25th 2020</p>
+          <div class="line2 py-1">
+            <p class="card-text mb-1 card-2 bg-info rounded-pill"></p>
+          </div>
+          <p class="card-text mb-5 fs-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit debitis nostrum accusamus, dicta blanditiis pariatur dolorum molestiae quam tenetur est sequi hic, culpa adipisci. Officiis, ipsa. Hic omnis rerum repudiandae.</p>
+          <button class="btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-tag"></i>podcast</button>
+          <button class="btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-clock"></i>55min.</button>
+          <button class="btn last-btn btn-sm border px-2 rounded-1"><i class="fa-solid fa-play"></i>play episode</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="mt-5 display-4 text-center text-uppercase text-info">join us</h2>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 text-center px-3 mb-3">
+            <div class="images-icons border border-1 rounded-3 p-2 shadow-lg">
+              <h2 class="mb-3 text-capitalize text-info fs-2">subscibe now</h2>
+              <img width="100" class="shadow-lg my-3 img-fluid rounded-4" src="images/twitter.png">
+              <p class="text-capitalize text-info fs-4">go to link</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center px-3 mb-3">
+            <div class="images-icons border border-1 rounded-3 p-2 shadow-lg">
+              <h2 class="mb-3 text-capitalize text-info fs-2">follow</h2>
+              <img width="100" class="shadow-lg my-3 img-fluid rounded-4" src="images/Phone.png">
+              <p class="text-capitalize text-info fs-4">go to link</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center px-3 mb-3">
+            <div class="images-icons border border-1 rounded-3 p-2 shadow-lg">
+              <h2 class="mb-3 text-capitalize text-info fs-2">like the page</h2>
+              <img width="100" class="shadow-lg my-3 img-fluid rounded-4" src="images/linkedin.png">
+              <p class="text-capitalize text-info fs-4">go to link</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center px-3 mb-3">
+            <div class="images-icons border border-1 rounded-3 p-2 shadow-lg">
+              <h2 class="mb-3 text-capitalize text-info fs-2">watch videos</h2>
+              <img width="100" class="shadow-lg my-3 img-fluid rounded-4" src="images/insgram.png">
+              <p class="text-capitalize text-info fs-4">go to link</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid bg-info pb-5 border-bottom border-secondary">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 px-4">
+            <div class="d-flex align-items-center justify-content-center py-2 border-dark border-top border-bottom">
+              <img width="160" height="160" class="rounded-circle shadow-lg" src="images/twitter.png">
+              <h2 class="text-capitalize text-light ms-3 display-6">good company</h2>                
+            </div>
+
+            <div class="copy-right text-light text-capitalize text-center fs-3">
+              <p class="my-4">tel: 000-000-000</p>
+              <p class="mb-4">address: <span class="text-uppercase">egypt</span></p>
+              <p class="mb-4">fax: 000-000-000</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 px-4">
+            <div class="d-flex align-items-center justify-content-center py-2 border-dark border-top border-bottom">
+                <img width="160" height="160"  class="rounded-circle shadow-lg" src="images/insgram.png">
+              <h2 class="text-capitalize text-light ms-3 display-6">important links</h2>                
+            </div>
+
+            <div class="copy-right2 text-capitalize text-center fs-3">
+              <p class="my-4">visit us</p>
+              <p class="mb-4">take <span class="text-lowercase">alook</span></p>
+              <p class="mb-4">your health is more important</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 px-4">
+            <div class="d-flex align-items-center justify-content-center py-2 border-dark border-top border-bottom">
+                <img width="160" height="160"  class="rounded-circle shadow-lg" src="images/linkedin.png">
+              <h2 class="text-capitalize text-light ms-3 display-6">vision</h2>                
+            </div>
+
+            <div class="copy-right text-light text-capitalize text-center fs-3">
+              <p class="my-4">services for all</p>
+              <p class="mb-4">provide best services</p>
+              <p class="mb-4">you will be better than before</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid border-bottom border-top border-secondary py-4 mb-3 text-center">
+          <p class="text-uppercase text-light display-6">copyright &copy; 2020 shimaahussin, Good company. all rights</p>
+        </div>
+    </div>
+  <!-- <script  src="js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+
+</html>
